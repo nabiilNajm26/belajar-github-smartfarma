@@ -1,0 +1,9 @@
+.env
+Pipfile.lock
+
+__pycache__/
+*.py[cod]
+
+virtualenv
+
+.DS_Store
