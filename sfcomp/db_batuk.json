@@ -1,0 +1,213 @@
+{
+   "dewasa":{
+            "0":["1", "6", "9", "14", "15"],
+            "1":{
+                "keywords":["abcd"],
+                "pertanyaan": "Apakah ada emergency sign ABCD (airway, breathing, coma, convulsion, circulation, dehydration)?",
+                "ya":"Menyarankan ke RS/IGD terdekat",
+                "tidak":"[2]"
+            },
+            "2":{
+                "keywords":["demam_lama"],
+                "pertanyaan": "Apakah ada demam lama (>7 hari)",
+                "ya":"Menyarankan ke dokter",
+                "tidak":"[3]"
+            },
+            "3":{
+                "keywords":["tanda_infeksi"],
+                "pertanyaan": "Apakah ada tanda-tanda infeksi (ingus/sputus berwarna)?",
+                "ya":"Memberikan obat batuk pilek dan menyarankan ke dokter untuk meresepkan antibiotik",
+                "tidak":"[4]",
+                "obat_ya":["batuk_pilek"]
+            },
+            "4":{
+                "keywords":["batuk_lama", "batuk_darah", "berat_turun"],
+                "pertanyaan": "Apakah ada salah satu tanda berikut? 1). batuk >2 minggu? 2) Apakah ada penurunan berat badan? 3). Apakah ada batuk darah?",
+                "ya":"Menyarankan periksa ke RS untuk memastikan kemungkinan TB atau infeksi yang lain",
+                "tidak":"[5]"
+            },
+            "5":{ 
+                "keywords":["pilek"],
+                "pertanyaan": "Apakah keluhanya pilek saja?",
+                "ya":"[7]",
+                "tidak":"[11]"
+            },
+            "6":{
+                "keywords":["batuk"],
+                "pertanyaan": "Apakah keluhannya batuk tanpa pilek?",
+                "ya":"[8]",
+                "tidak":"[8]"
+            },
+            "7":{
+                "keywords":["pilek_dipicu"],
+                "pertanyaan": "Apakah ada pemicu pilek (misalnya udara dingin, malam hari, minum es, dll) sehingga meler terjadi hanya pada waktu tertentu?",
+                "ya":"Berikan antialergi atau dekongestan+antialergi",
+                "tidak":"Berikan dekongestan saja, nasal atau oral",
+                "obat_ya":["antialergi", ["dekongestan","antialergi"]],
+                "obat_tidak":["dekongestan nasal", "dekongestan oral"]
+            },
+            "8":{
+                "keywords":["batuk_waktu"],
+                "pertanyaan": "Apakah batuk  terjadi pada waktu-waktu tertentu saja dalam sehari? (misalnya hanya pagi hari, atau malam hari)",
+                "ya":"Berikan antialergi atau obat batuk+alergi [12]",
+                "tidak":"[7]",
+                "obat_ya":["antialergi", ["batuk","antialergi"]]
+            },
+            "9":{
+                "keywords":["napas_bunyi", "napas_cepat"],
+                "pertanyaan": "Apakah napasnya berbunyi atau terlalu cepat? ",
+                "ya":"[10]",
+                "tidak":"[8]"
+            },
+            "10":{
+                "keywords":["napas_sesak"],
+                "pertanyaan": "Apakah ada sesak napas?",
+                "ya":"Sarankan ke dokter karena membutuhkan terapi antiasma yang lebih poten",
+                "tidak":"Menunjukkan adanya asma dengan dosis sesuai diberikan obat bronkodilator (teofilin, terbutaline sulfat, dll)",
+                "obat_tidak":["bronkodilator"]
+            },
+            "11":{
+                "keywords":["riwayat_asma"],
+                "pertanyaan": "Apakah punya riwayat asma dan sudah mendapatkan obat?",
+                "ya":"Gunakan obat asma secara tertib",
+                "tidak":"[12]"
+            },
+            "12":{
+                "keywords":["batuk_pilek"],
+                "pertanyaan": "Apakah ada batuk sekaligus pilek?",
+                "ya":"[13]",
+                "tidak":"[13]"
+            },
+            "13":{
+                "keywords":["batuk_berdahak"],
+                "pertanyaan": "Apakah batuknya berdahak?",
+                "ya":"Berikan dekongestan + mukolitik",
+                "tidak":"Berikan obat batuk pilek yang mengandung ekspektoran",
+                "obat_ya":["dekongestan", "mukolitik"],
+                "obat_tidak":["batuk_pilek ekspektoran"]
+            },
+            "14":{
+                "keywords":["batuk_kering"],
+                "pertanyaan": "Apakah batuknya kering",
+                "ya":"Berikan obat batuk pilek yang mengandung dekstromethorphan",
+                "tidak":"",
+                "obat_ya":["batuk_pilek dekstromethorphan"]
+            },
+            "15":{
+                "keywords":["demam"],
+                "pertanyaan": "Apakah disertai demam?",
+                "ya":"Berikan tambahan parasetamol",
+                "tidak":"",
+                "obat_ya":["parasetamol"]
+            }
+        },
+        "anak":{
+            "0":["1", "6", "9", "10", "15"],
+            "1":{
+                "keywords":["usia_3"],
+                "pertanyaan": "Apakah usia <3 bulan?",
+                "ya":"Berikan terapi suportif non farmakologi yang bisa mengurangi batuk atau pilek (misalnya balsem transpulmin). Jika tidak berkurang diperiksakan ke dokter",
+                "tidak":"[2]"
+            },
+            "2":{
+                "keywords":["priority_sign"],
+                "pertanyaan": "Apakah ada priority sign (3TPR MOB: tiny baby, pallor, restless, malnutrition, oedema, burn)?",
+                "ya":"Menyarankan ke RS/IGD terdekat",
+                "tidak":"[3]"
+            },
+            "3":{
+                "keywords":["abcd"],
+                "pertanyaan": "Apakah ada emergency sign ABCD (airway, breathing, coma, convulsion, circulation, dehydration)?",
+                "ya":"Menyarankan ke RS/IGD terdekat",
+                "tidak":"[4]"
+            },
+            "4":{
+                "keywords":["tanda_infeksi"],
+                "pertanyaan": "Apakah ada tanda-tanda infeksi (ingus/sputus berwarna)?",
+                "ya":"Memberikan obat batuk pilek dan menyarankan ke dokter untuk meresepkan antibiotik",
+                "tidak":"[5]",
+                "obat_ya":["batuk_pilek"]
+            },
+            "commented_4":{
+                "keywords":["nafsu_makan_kurang"],
+                "pertanyaan": "Apakah disertai tidak nafsu makan dan penurunan berat badan?",
+                "ya":"Sarankan untuk periksa kemungkinan flek paru",
+                "tidak":"[5]"
+            },
+            "5":{ 
+                "keywords":["pilek"],
+                "pertanyaan": "Apakah keluhanya pilek saja?",
+                "ya":"[7]",
+                "tidak":"[11]"
+            },
+            "6":{
+                "keywords":["batuk"],
+                "pertanyaan": "Apakah keluhannya batuk tanpa pilek?",
+                "ya":"[8]",
+                "tidak":"[12]"
+            },
+            "7":{
+                "keywords":["pilek_dipicu"],
+                "pertanyaan": "Apakah ada pemicu pilek (misalnya udara dingin, malam hari, minum es, dll) sehingga meler terjadi hanya pada waktu tertentu?",
+                "ya":"Berikan antialergi atau obat batuk pilek yang mengandung antialergi",
+                "tidak":"[6]",
+                "obat_ya":["antialergi", ["batuk_pilek antialergi"]]
+            },
+            "8":{
+                "keywords":["batuk_waktu"],
+                "pertanyaan": "Apakah batuk  terjadi pada waktu-waktu tertentu saja dalam sehari? (misalnya hanya pagi hari, atau malam hari)",
+                "ya":"Berikan antialergi atau obat batuk pilek yang mengandung antialergi atau berikan terapi simtomatik dekongestan nasal",
+                "tidak":"[7]",
+                "obat_ya":["antialergi", ["batuk","antialergi"],"terapi simtomatik dekongestan nasal"]
+            },
+            "9":{
+                "keywords":["napas_bunyi", "napas_cepat"],
+                "pertanyaan": "Apakah napasnya berbunyi atau terlalu cepat? ",
+                "ya":"[?]",
+                "tidak":"[8]"
+            },
+            "10":{
+                "keywords":["napas_sesak"],
+                "pertanyaan": "Apakah ada sesak napas?",
+                "ya":"Sarankan ke dokter karena membutuhkan terapi antiasma yang lebih poten",
+                "tidak":"Menunjukkan adanya asma dengan dosis sesuai diberikan obat bronkodilator (teofilin, terbutaline sulfat, dll)",
+                "obat_tidak":["bronkodilator"]
+            },
+            "11":{
+                "keywords":["riwayat_asma"],
+                "pertanyaan": "Apakah punya riwayat asma dan sudah mendapatkan obat?",
+                "ya":"Gunakan obat asma secara tertib",
+                "tidak":"[12]"
+            },
+            "12":{
+                "keywords":["batuk_pilek"],
+                "pertanyaan": "Apakah ada batuk sekaligus pilek?",
+                "ya":"Berikan obat batuk pilek yang mengandung dekstromethorphan",
+                "tidak":"[13]",
+                "obat_ya":["batuk_pilek dekstromethorphan"]
+            },
+            "13":{
+                "keywords":["batuk_berdahak"],
+                "pertanyaan": "Apakah batuknya berdahak?",
+                "ya":"Berikan mukolitik",
+                "tidak":"[14]",
+                "obat_ya":["mukolitik"]
+            },
+            "14":{
+                "keywords":["batuk_kering"],
+                "pertanyaan": "Apakah batuknya kering",
+                "ya":"Berikan obat batuk pilek yang mengandung dekstromethorphan",
+                "tidak":"Berikan obat batuk pilek yang mengandung ekspektoran",
+                "obat_ya":["batuk_pilek dekstromethorphan"],
+                "obat_tidak":["batuk_pilek ekspektoran"]
+            },
+            "15":{
+                "keywords":["demam_7"],
+                "pertanyaan": "Apakah disertai demam <7 hari?",
+                "ya":"Tambahkan parasetamol atau berikan obat kombinasi parasetamol, dekongestan, dan obat batuk",
+                "tidak":"Berikan obat batuk pilek saja tanpa parasetamol",
+                "obat_ya":["parasetamol", ["parasetamol", "dekongestan", "batuk"]],
+                "obat_tidak":["batuk_pilek"]
+            }
+        }
+}
