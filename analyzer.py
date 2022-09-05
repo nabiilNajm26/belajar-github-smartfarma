@@ -25,6 +25,9 @@ def cek_anak(s):
 def cek_dewasa(s):
     return 
 
+def cek_bayi(s):
+    return bool(re.search("bayi", s)) 
+
 # s = pesan
 def main_checker(s, user_session_id=None, user_note=None):
     
